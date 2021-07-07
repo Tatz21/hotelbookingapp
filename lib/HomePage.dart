@@ -12,10 +12,11 @@ class _HomepageState extends State<Homepage> {
     return Container(
       color: Colors.white,
       child: Scaffold(
-        
+        drawer: Drawer(),
         extendBodyBehindAppBar: true,
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          
           leading: Builder(builder: (context) => 
             IconButton(
               icon: Icon(
