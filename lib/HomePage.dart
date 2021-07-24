@@ -11,6 +11,30 @@ class _HomepageState extends State<Homepage> {
     return Container(
       color: Colors.white,
       child: Scaffold(
+        bottomNavigationBar: 
+        BottomNavigationBar(showUnselectedLabels: true,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black,
+          items: [
+           BottomNavigationBarItem(
+           icon: new Icon(Icons.home,color: Colors.black,),
+           label: 'Home',
+           
+         ),
+           BottomNavigationBarItem(
+           icon: new Icon(Icons.explore,color: Colors.black),
+           label: 'NearBy'
+         ),
+           BottomNavigationBarItem(
+           icon: new Icon(Icons.favorite,color: Colors.black),
+           label: 'Favourite'
+         ),
+           BottomNavigationBarItem(
+           icon: new Icon(Icons.person,color: Colors.black),
+           label: 'Profile'
+         ),
+
+        ],),
         drawer: Drawer(),
         extendBodyBehindAppBar: true,
         backgroundColor: Colors.transparent,
@@ -138,35 +162,146 @@ class _HomepageState extends State<Homepage> {
                   )
                 ],
               ),
-              SizedBox(height: 70,
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: 75,
                 child: ListView(
+                  scrollDirection: Axis.horizontal,
                   children: [
-                    Container(
-                      width: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
-                          color: Color(0xffADCAE5)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                        width: 105,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14),
+                            color: Color(0xffADCAE5)),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              IconButton(
+                                  icon: Icon(Icons.hotel, color: Colors.white),
+                                  onPressed: () {}),
+                              Text(
+                                "Hotels",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                    Container(
-                      width: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
-                          color: Color(0xffADCAE5)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                        width: 105,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14),
+                            color: Color(0xffBCCFD5)),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              IconButton(
+                                  icon: Icon(Icons.room_service,
+                                      color: Colors.white),
+                                  onPressed: () {}),
+                              Text(
+                                "Resturents",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                       Container(
-                      width: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
-                          color: Color(0xffADCAE5)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                        width: 105,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14),
+                            color: Color(0xffCFD5F6)),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              IconButton(
+                                  icon: Icon(Icons.directions_car,
+                                      color: Colors.white),
+                                  onPressed: () {}),
+                              Text(
+                                "Transport",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                       Container(
-                      width: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
-                          color: Color(0xffADCAE5)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                        width: 105,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14),
+                            color: Color(0xffF9D1C2)),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              IconButton(
+                                  icon: Icon(Icons.flight_takeoff,
+                                      color: Colors.white),
+                                  onPressed: () {}),
+                              Text(
+                                "Flights",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
-                     
-                     
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Text(
+                      "Recomendation",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Text(
+                      "See All",
+                      style: TextStyle(color: Colors.black, fontSize: 15),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: 200,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(),
                   ],
                 ),
               )
