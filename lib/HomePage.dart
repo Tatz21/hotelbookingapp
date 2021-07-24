@@ -6,7 +6,6 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,9 +15,8 @@ class _HomepageState extends State<Homepage> {
         extendBodyBehindAppBar: true,
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          
-          leading: Builder(builder: (context) => 
-            IconButton(
+          leading: Builder(
+            builder: (context) => IconButton(
               icon: Icon(
                 Icons.list,
                 color: Colors.black,
@@ -80,7 +78,6 @@ class _HomepageState extends State<Homepage> {
                   height: 50,
                   child: TextField(
                     decoration: InputDecoration(
-                      
                         prefixIcon: IconButton(
                             icon: Icon(
                               Icons.search,
@@ -96,16 +93,17 @@ class _HomepageState extends State<Homepage> {
                                   color: Color(0xff202732),
                                 ),
                                 child: IconButton(
-                                    icon: Icon(Icons.equalizer,color: Colors.white,),
+                                    icon: Icon(
+                                      Icons.equalizer,
+                                      color: Colors.white,
+                                    ),
                                     onPressed: () {})),
                           ),
                         ),
                         border: new OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xffF6F6F6)),
                           borderRadius: const BorderRadius.all(
-
                             const Radius.circular(21.0),
-                            
                           ),
                         ),
                         filled: true,
@@ -115,18 +113,63 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
-              SizedBox(height: 30,),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Text("Categories",style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Text(
+                      "Categories",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Text(
+                      "See All",
+                      style: TextStyle(color: Colors.black, fontSize: 15),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 70,
+                child: ListView(
+                  children: [
+                    Container(
+                      width: 70,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(14),
+                          color: Color(0xffADCAE5)),
+                    ),
+                    Container(
+                      width: 70,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(14),
+                          color: Color(0xffADCAE5)),
+                    ),
+                       Container(
+                      width: 70,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(14),
+                          color: Color(0xffADCAE5)),
+                    ),
+                       Container(
+                      width: 70,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(14),
+                          color: Color(0xffADCAE5)),
+                    ),
+                     
+                     
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Text("See All",style: TextStyle(color: Colors.black,fontSize: 15),),
-                )
-              ],)
+              )
             ],
           ),
         ),
